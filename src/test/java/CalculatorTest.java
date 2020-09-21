@@ -22,8 +22,14 @@ public class CalculatorTest {
             assertEquals(2,calc.subtract(8,6));
         }
 
-
-
+        @Test
+        public void canMultiplyTwoInts(){
+            assertEquals(20,calc.multiply(4,5));
+        }
+        @Test
+        public void canDivideTwoInts(){
+            assertEquals(20.00,calc.divide(100.00,5.00),0.01);
+        }
 
 
 }
