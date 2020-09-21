@@ -1,6 +1,32 @@
 public class Printer {
+    private int sheetsRemaining;
+    private String errorMessage;
 
 
+    public Printer(){
+        this.sheetsRemaining = 200;
+        this.errorMessage = "";
+
+    }
+
+    public int getSheetsRemaining(){
+        return this.sheetsRemaining;
+    }
+
+    public String getErrorMessage(){
+        return this.errorMessage;
+    }
+
+    public void print(int pages, int copies){
+        if (pages*copies <= this.sheetsRemaining) {
+            this.sheetsRemaining -= pages*copies;
+        } else {
+            this.errorMessage = "Give me more paper human!";
+
+        }
+
+
+    }
 
 }
 
