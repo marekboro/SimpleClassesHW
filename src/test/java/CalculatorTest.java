@@ -10,12 +10,20 @@ public class CalculatorTest {
 
         @Before
         public void before(){
-            calc = new Calculator();
+            calc = new Calculator("TX-100");
         }
         @Test
-        public void canAdd(){
+        public void canAddTwoInts(){
             assertEquals(10, calc.add(3,7));
         }
+
+        @Test
+        public void canSubtractSecondFromFirst(){
+            assertEquals(2,calc.subtract(8,6));
+        }
+
+
+
 
 
 }
