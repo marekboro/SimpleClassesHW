@@ -1,11 +1,13 @@
 public class Printer {
     private int sheetsRemaining;
     private String errorMessage;
+    private int tonerVolume;
 
 
     public Printer(){
         this.sheetsRemaining = 200;
         this.errorMessage = "";
+        this.tonerVolume = 500;
 
     }
 
@@ -17,9 +19,14 @@ public class Printer {
         return this.errorMessage;
     }
 
+    public int getToner(){
+        return this.tonerVolume;
+    }
+
     public void print(int pages, int copies){
         if (pages*copies <= this.sheetsRemaining) {
             this.sheetsRemaining -= pages*copies;
+            this.tonerVolume -= pages*copies;
         } else {
             this.errorMessage = "Give me more paper human!";
 

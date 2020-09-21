@@ -26,6 +26,12 @@ public class PrinterTest {
         assertEquals("Give me more paper human!",printer.getErrorMessage());
     }
 
+    @Test
+    public void tonerVolumeDecresesProportionallyToPaperUsed(){
+        printer.print(30,4);
+        assertEquals(380,printer.getToner());
+    }
+
 
 
 
