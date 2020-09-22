@@ -23,11 +23,22 @@ public class WaterBottleTest {
         assertEquals(90,waterBottle.getVolume());
     }
 
+
+
+
     @Test
     public void hasVolumeOf0afterBottleExploded(){
         waterBottle.explode();
         assertEquals(0,waterBottle.getVolume());
     }
+
+    @Test
+    public void cannotDrinkIfVolumeTooLow(){
+        waterBottle.explode();
+        waterBottle.drink();
+        assertEquals(0,waterBottle.getVolume());
+    }
+
 
     @Test
     public void hasVolumeOf100AfterBeingExplodedAndRematerialised(){

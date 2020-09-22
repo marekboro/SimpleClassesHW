@@ -2,25 +2,27 @@ public class WaterBottle {
 
     private int volume;
 
-    public WaterBottle(){
+    public WaterBottle() {
         this.volume = 100;
     }
 
-    public int getVolume(){
+    public int getVolume() {
         return this.volume;
     }
 
-    public void drink(){
-        this.volume -=10;
+    public void drink() {
+        if (this.volume >= 10) {
+            this.volume -= 10;
+        }
     }
 
     public void explode() {
         this.volume = 0;
     }
 
-    public void rematerialise(){
-        while (this.volume <100) {
-            this.volume +=1;
+    public void rematerialise() {
+        while (this.volume < 100) {
+            this.volume += 1;
         }
     }
 }
